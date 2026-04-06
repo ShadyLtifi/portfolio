@@ -1,0 +1,109 @@
+<div class="portfolio">
+
+  <!-- HERO -->
+<section class="hero">
+  <div class="hero-container">
+
+    <!-- IMAGE -->
+    <div class="hero-image">
+      <img src="assets/images/unnamed.jpg" alt="Profile Image" />
+    </div>
+
+    <!-- TEXT -->
+    <div class="hero-content">
+      <h1>Mohamed Shady Ltifi</h1>
+      <h2>Full Stack Developer | Angular & Spring Boot</h2>
+      <p>
+        Passionate about building scalable web applications and integrating AI solutions.
+      </p>
+
+      <div class="hero-buttons">
+          <a href="assets/cv/cvAng.pdf" download>
+        <button>Download CV</button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <h2>My Skills</h2>
+
+  <p>
+    Software Engineering graduate from ESPRIT with hands-on experience in Angular, Spring Boot, and cloud-based solutions. 
+    I completed my final-year internship at Délice Holding, contributing to the design and development of a CAPEX management platform.
+  </p>
+
+  <div class="skills">
+
+    <div class="skill-category">
+      <h3>Backend</h3>
+      <p>Spring Boot, Spring Security, Java, Symfony 5, PHP, .NET</p>
+    </div>
+
+    <div class="skill-category">
+      <h3>Frontend Development</h3>
+      <p>Angular, HTML, CSS, Bootstrap, JavaScript</p>
+    </div>
+
+    <div class="skill-category">
+      <h3>Databases</h3>
+      <p>SQL, MongoDB, PostgreSQL, Maria DB</p>
+    </div>
+
+    <div class="skill-category">
+      <h3>DevOps</h3>
+      <p>Jenkins, Git, Maven, Prometheus, SonarQube, Grafana</p>
+    </div>
+
+    <div class="skill-category">
+      <h3>Power Platform</h3>
+      <p>Power Apps, Power Automate, Power BI, SharePoint</p>
+    </div>
+
+        <div class="skill-category">
+      <h3>Outils de Virtualisation</h3>
+      <p>VirtualBox, VMWare Workstation</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- PROJECTS -->
+ <section class="projects" id="projects">
+  <h2>My Projects</h2>
+
+  <div class="projects-container">
+    <app-project-card
+      *ngFor="let project of projects"
+      [project]="project"
+      (view)="onViewProject($event)">
+    </app-project-card>
+  </div>
+</section>
+
+<app-project-modal
+  *ngIf="selectedProject as project"
+  [project]="project"
+  (close)="selectedProject = null">
+</app-project-modal>
+
+
+  <!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+
+  <div class="contact-container">
+    <div class="contact-card">
+      <h3>Email</h3>
+      <p>shedyltifi&#64;gmail.com</p>
+    </div>
+
+    <div class="contact-card">
+      <h3>Phone</h3>
+      <p>+216 22 852 566</p>
+    </div>
+  </div>
+</section>
