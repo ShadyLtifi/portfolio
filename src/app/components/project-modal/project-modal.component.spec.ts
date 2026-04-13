@@ -14,6 +14,15 @@ describe('ProjectModalComponent', () => {
 
     fixture = TestBed.createComponent(ProjectModalComponent);
     component = fixture.componentInstance;
+    component.project = {
+  title: 'Test Project',
+  description: 'Test',
+  image: [
+    { src: 'test.png', description: 'img' }
+  ],
+  technologies: [],
+  features: []
+};
     fixture.detectChanges();
   });
 

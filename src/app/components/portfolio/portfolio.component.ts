@@ -31,24 +31,8 @@ Implemented automated budget calculation for large projects, where the budget is
 
   image: [
     {
-      src: 'assets/images/DepAct.png',
-      description: 'Activity Acceptance and Expense Diagram'
-    },
-    {
-      src: 'assets/images/EcranProjet.jpg',
-      description: 'Project Interface'
-    },
-    {
-      src: 'assets/images/EcranSp.jpg',
-      description: 'Sub-project Interface'
-    },
-    {
-      src: 'assets/images/EcranDP.jpg',
-      description: 'Expense Interface'
-    },
-    {
-      src: 'assets/images/d.jpg',
-      description: 'Dashboard Interface'
+      src: 'assets/images/vdpfe.mp4',
+      description: 'This demonstration video showcases the CAPEX Management Platform'
     }
   ],
 
@@ -68,6 +52,10 @@ Designed and developed a professional job offer management system, including sys
   technologies: ['Angular v18', 'Spring Boot', 'Spring Security', 'MongoDB', 'Jira', 'Git'],
 
   image: [
+        {
+      src: 'assets/images/candidatEspace.jpg',
+      description: 'Candidate Dashboard'
+    },
     {
       src: 'assets/images/log.jpg',
       description: 'Login Interface'
@@ -83,10 +71,6 @@ Designed and developed a professional job offer management system, including sys
     {
       src: 'assets/images/adexp.jpg',
       description: 'Add Experience Interface'
-    },
-    {
-      src: 'assets/images/candidatEspace.jpg',
-      description: 'Candidate Dashboard'
     },
     {
       src: 'assets/images/lstexp.jpg',

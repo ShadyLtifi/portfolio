@@ -4,7 +4,7 @@
 
     <!-- HERO -->
     <div class="modal-hero">
-      <img *ngIf="project.images?.length" [src]="project.images[0].src" />
+      <img *ngIf="project.image?.length" [src]="project.image[0].src" />
       <div class="overlay"></div>
 
       <div class="hero-text">
@@ -15,7 +15,6 @@
 
     <!-- INFO -->
     <div class="modal-info">
-
       <div>
         <h4>Technologies</h4>
         <div class="tech-list">
@@ -24,9 +23,6 @@
           </span>
         </div>
       </div>
-
- 
-
     </div>
 
     <!-- FEATURES -->
@@ -39,16 +35,35 @@
 
     <!-- GALLERY -->
     <div class="modal-gallery">
-      <div class="gallery-item"
-           *ngFor="let img of project.image; let i = index"
-           [ngClass]="{'big': i === 0}">
 
-        <img [src]="img.src" />
-        <div class="caption">{{ img.description }}</div>
+      <div class="gallery-item"
+           *ngFor="let media of project.image">
+
+        <!-- VIDEO -->
+        <ng-container *ngIf="media.src.endsWith('.mp4'); else imgBlock">
+          <video controls>
+            <source [src]="media.src" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </ng-container>
+
+        <!-- IMAGE -->
+        <ng-template #imgBlock>
+          <img [src]="media.src" />
+        </ng-template>
+
+        <!-- CAPTION -->
+        <div class="caption">
+          {{ media.description }}
+        </div>
 
       </div>
+
     </div>
 
   </div>
-<button class="close-btn" (click)="close.emit()">✕</button>
+
+  <!-- CLOSE BUTTON -->
+  <button class="close-btn" (click)="close.emit()">✕</button>
+
 </div>
