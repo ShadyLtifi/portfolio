@@ -1,0 +1,101 @@
+.projects {
+  padding: 60px 20px;
+}
+
+.projects h1 {
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 40px;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* CARD */
+.project-card {
+  display: flex;
+  gap: 40px;
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+/* TEXT */
+.project-info {
+  flex: 1;
+}
+
+.description {
+  color: #cbd5f5;
+}
+
+.block {
+  margin-top: 15px;
+}
+
+.block h4 {
+  color: #38bdf8;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.block p {
+  color: #cbd5f5;
+}
+
+/* TECH */
+.tech span {
+  display: inline-block;
+  background: #0f172a;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* MEDIA */
+.project-media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make video nicer */
+.project-media video {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* Optional hover effect */
+.project-media video:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-media img,
+  .project-media video {
+    width: 100%;
+  }
+}

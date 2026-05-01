@@ -1,0 +1,70 @@
+<section class="projects">
+  <h1>Projects</h1>
+  <p class="subtitle">Some of the work I've built as a full-stack engineer</p>
+
+  <div class="project-list">
+
+    <div *ngIf="project">
+
+      <!-- TEXT -->
+      <div class="project-info">
+        <h2>{{ project.title }}</h2>
+
+        <p class="description">
+          {{ project.description }}
+        </p>
+
+        <div class="block">
+          <h4>Problem</h4>
+          <p>{{ project.problem }}</p>
+        </div>
+
+        <div class="block">
+          <h4>Solution</h4>
+          <p>{{ project.solution }}</p>
+        </div>
+
+        <div class="block" *ngIf="project.impact">
+          <h4>Impact</h4>
+          <p>{{ project.impact }}</p>
+        </div>
+
+        <div class="block" *ngIf="project.context">
+          <h4>Context</h4>
+          <p>{{ project.context }}</p>
+        </div>
+
+        <div class="block" *ngIf="project.role">
+          <h4>My Contribution</h4>
+          <p>{{ project.role }}</p>
+        </div>
+
+        <div class="tech">
+          <span *ngFor="let tech of project.tech">
+            {{ tech }}
+          </span>
+        </div>
+
+        <div class="links">
+          <a *ngIf="project.demo" [href]="project.demo" target="_blank" class="btn">Live Demo</a>
+          <a *ngIf="project.github" [href]="project.github" target="_blank" class="btn-outline">GitHub</a>
+        </div>
+      </div>
+
+      <!-- MEDIA -->
+      <div class="project-media">
+
+            <video *ngIf="project.video; else imageBlock" controls>
+            <source [src]="project.video" type="video/mp4">
+            </video>
+
+            <ng-template #imageBlock>
+            <img [src]="project.image" />
+            </ng-template>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

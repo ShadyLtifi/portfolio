@@ -1,0 +1,98 @@
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="text">
+      <h1>Hi, I'm MOHAMED SHADY LTIFI</h1>
+      <h2>Full-Stack Engineer | Angular & Spring Boot</h2>
+
+      <p>
+        I build scalable web applications and data-driven systems,
+        including predictive models and enterprise platforms.
+      </p>
+
+    <div class="actions">
+      <a (click)="goToProjects()" class="btn">
+        View Projects
+      </a>
+
+      <a href="assets/cv/cvAng.pdf" download class="btn-outline">
+        Download Resume
+      </a>
+    </div>
+    </div>
+
+    <div class="image">
+      <img src="assets/images/photo.jpg" alt="Mohamed Shady" />
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills">
+  <h2>Technical Skills</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Backend</h3>
+      <p>Java, Spring Boot, Spring Security, JPA, Hibernate</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Frontend</h3>
+      <p>Angular, TypeScript, HTML, CSS</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>API & Architecture</h3>
+      <p>REST APIs, Microservices, UML, Clean Code, SOLID</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Databases</h3>
+      <p>MySQL, PostgreSQL, MongoDB</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Tools & DevOps</h3>
+      <p>Git, Docker, Jenkins, Maven, SonarQube</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Microsoft Power Platform</h3>
+      <p>Power Apps, Power Automate, Power BI, SharePoint</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="home-projects">
+  <h2>My Projects</h2>
+
+  <div class="cards">
+
+    <div 
+      class="card" 
+      *ngFor="let project of projects"
+      (click)="getProject(project.slug)"
+    >
+
+      <div class="card-content">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+
+        <div class="tags">
+          <span *ngFor="let tech of project.tech">
+            {{ tech }}
+          </span>
+        </div>
+      </div>
+
+      <div class="overlay">
+        <span>View Project →</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
